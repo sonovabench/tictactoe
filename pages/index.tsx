@@ -7,6 +7,8 @@ export default function Home() {
       <Head>
         <title>Tic Tac Toe</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="style.css"/>
+        <script src="script.js"></script>
       </Head>
 
       <main className={styles.main}>
@@ -15,9 +17,26 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get started by pressing play
+          Get started by pressing play. Then, choose X's or O's and beat your opponent. 
           <code className={styles.code}>pages/index.js</code>
         </p>
+        <body>
+          <div class="board" id="board">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+          </div>
+          <div class="winning-message" id="winningMessage">
+            <div id="winningMessageText"></div>
+            <button id="restartButton">Restart</button>
+          </div>
+        </body>
       </main>
 
       <footer className={styles.footer}>
